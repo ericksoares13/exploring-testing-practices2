@@ -66,8 +66,16 @@ O TestMiner mostra 184 arquivos como *mocks*. No entanto, a ferramenta classific
 
 ### Repositório 2
 
-Repositório: `<URL_DO_REPOSITÓRIO>`
+Repositório: https://github.com/jestjs/jest
 
-URL TestMiner: `<URL_NO_TESTMINER>`
+URL TestMiner: https://andrehora.github.io/testminer/#facebook/jest
 
-Explicação: `<SUA_EXPLICAÇÃO>`
+Explicação:
+
+**Dado relevante: proporção de testes end-to-end (E2E)**
+
+Na versão 30.5.2, o TestMiner mostra 1444 arquivos na categoria *E2E*, contra apenas 288 em *Tests*. Ou seja, o Jest tem cerca de cinco vezes mais arquivos de teste end-to-end do que de testes comuns.
+
+Esses arquivos ficam na pasta `e2e`, que é organizada em pequenos projetos de exemplo, cada um simulando uma situação real de uso do Jest. Os testes em `e2e/__tests__` rodam o próprio Jest dentro desses projetos e conferem o resultado. Por exemplo, o [`callDoneTwice.test.ts`](https://github.com/jestjs/jest/blob/main/e2e/__tests__/callDoneTwice.test.ts) roda o projeto `call-done-twice` e verifica se o Jest mostra um erro quando `done()` é chamado duas vezes.
+
+A ideia central dos testes end-to-end é testar o sistema do jeito que o usuário realmente usa, do começo ao fim, em vez de testar cada parte separadamente. No caso do Jest, isso significa rodar o próprio Jest e conferir a saída que apareceria no terminal de quem está usando.
