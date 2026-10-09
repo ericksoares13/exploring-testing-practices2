@@ -46,11 +46,23 @@ Para cada repositório, escolha uma prática ou dado de teste relevante e expliq
 
 ### Repositório 1 
 
-Repositório: `<URL_DO_REPOSITÓRIO>`
+Repositório: https://github.com/mockito/mockito
 
-URL TestMiner: `<URL_NO_TESTMINER>`
+URL TestMiner: https://andrehora.github.io/testminer/#mockito/mockito
 
-Explicação: `<SUA_EXPLICAÇÃO>`
+Explicação:
+
+**Prática: testes de regressão**
+
+No TestMiner, aumentando a profundidade na seção *Test Location*, dá para ver que o maior subpacote de testes se chama `bugs`, com 34 arquivos.
+
+Cada teste desse pacote reproduz um bug que já foi encontrado e corrigido, e o nome da classe descreve o problema, como [`NPEWhenMockingThrowablesTest`](https://github.com/mockito/mockito/blob/main/mockito-core/src/test/java/org/mockitousage/bugs/NPEWhenMockingThrowablesTest.java). Vários deles também têm um comentário com o número da issue.
+
+A ideia central dos testes de regressão é que, se alguém mexer no código no futuro e o bug voltar, o teste falha e avisa na hora. Assim, um comportamento que já foi corrigido não volta a quebrar sem ninguém perceber.
+
+**Dado relevante: quantidade de *mocks***
+
+O TestMiner mostra 184 arquivos como *mocks*. No entanto, a ferramenta classifica como mock qualquer arquivo de teste que tenha "mock" no nome, o que acontece com quase todo teste do Mockito.
 
 ### Repositório 2
 
